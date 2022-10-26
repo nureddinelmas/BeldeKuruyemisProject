@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">belde_kuruyemis_project</string>
+    <string name="title_anasayfa">Ana Sayfa</string>
+    <string name="title_urunler">Ürünler</string>
+    <string name="title_hakkimizda">Hakkımızda</string>
+    <string name="profile_iletisim">İletişim</string>
+</resources>
