@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.nureddinelmas.belde_kuruyemis_project.ui.home.HomeFragment"
+        android:label="@string/title_anasayfa"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.nureddinelmas.belde_kuruyemis_project.ui.about.AboutFragment"
+        android:label="@string/title_hakkimizda"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.nureddinelmas.belde_kuruyemis_project.ui.contact.ContactFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/productsDetailFragment"
+        android:name="com.nureddinelmas.belde_kuruyemis_project.ui.product.ProductsDetailFragment"
+        android:label="fragment_products_detail"
+        tools:layout="@layout/fragment_products_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_products"
+        android:name="com.nureddinelmas.belde_kuruyemis_project.ui.product.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product">
+        <action
+            android:id="@+id/action_productFragment_to_productsDetailFragment"
+            app:destination="@id/productsDetailFragment" />
+    </fragment>
+</navigation>

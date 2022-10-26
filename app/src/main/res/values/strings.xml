@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">belde_kuruyemis_project</string>
+    <string name="title_anasayfa">Ana Sayfa</string>
+    <string name="title_urunler">Ürünler</string>
+    <string name="title_hakkimizda">Hakkımızda</string>
+    <string name="profile_iletisim">İletişim</string>
+    <string name="googleMapsKey">AIzaSyD4OuA5dDcyYEl_3JQx8WsZDwQOeycNXZ8</string>
+    <string-array name="contact_questions">
+        <item>Sipariş ver</item>
+        <item>Soru sor</item>
+        <item>Fikir ver</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
+

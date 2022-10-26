@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="products"
+            type="com.nureddinelmas.belde_kuruyemis_project.ui.product.model.Products" />
+        <variable
+            name="listener"
+            type="com.nureddinelmas.belde_kuruyemis_project.ui.product.model.ProductClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id ="@+id/recyclerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+<LinearLayout
+
+    android:orientation="horizontal"
+    android:background="@drawable/border_stroke"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="@{listener::onProductClicked}"
+    android:layout_margin="4dp">
+    <TextView
+        android:id="@+id/recyclerItemIdText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:text="@{String.valueOf(products.id)}"
+        android:visibility ="gone"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id ="@+id/recyclerImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType ="centerCrop"
+        android:downloadUrl="@{products.image}"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[5]"
+        app:shapeAppearanceOverlay="@style/rounded_image_view"/>
+
+
+    <TextView
+        android:id="@+id/recyclerItemNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:text="@{products.name}"
+       android:layout_marginTop="30dp"
+        android:textAlignment="viewStart"
+        android:textSize="20sp" />
+
+</LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
