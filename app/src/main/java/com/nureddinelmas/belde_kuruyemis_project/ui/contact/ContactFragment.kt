@@ -21,6 +21,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.nureddinelmas.belde_kuruyemis_project.R
 import com.nureddinelmas.belde_kuruyemis_project.databinding.ContactExtraLayoutBinding
 import com.nureddinelmas.belde_kuruyemis_project.databinding.FragmentContactBinding
+import kotlinx.android.synthetic.main.contact_extra_layout.*
 import java.net.URLEncoder
 
 class ContactFragment : Fragment() {
@@ -47,7 +48,8 @@ class ContactFragment : Fragment() {
 		
 		_binding = FragmentContactBinding.inflate(inflater, container, false)
 		
-		extraBinding = ContactExtraLayoutBinding.inflate(inflater)
+		extraBinding = ContactExtraLayoutBinding.inflate(inflater, container, true)
+		
 		
 		extraBinding.textKonum.setOnClickListener {
 			val intent = Intent(Intent.ACTION_VIEW)
